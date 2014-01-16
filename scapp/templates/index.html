@@ -8,7 +8,7 @@
 	<meta name="author" content="Muhammad Usman">
 
 	<!-- The styles -->
-	<link href="../../static/css/main.css" rel="stylesheet">
+	<link href="../static/css/main.css" rel="stylesheet">
 	<style type="text/css">		
 		*{font-family:Arial;padding:0;margin:0;border:none;overflow-x:hidden;}
 		.banner{position:relative; width:1000px;height:308px;}
@@ -20,78 +20,18 @@
 		.trigger{ float:left; margin-right:5px; background:#2175D9; width:16px; height:16px; line-height:16px; text-align:center;}
 		.current{background:#004699; width:16px; height:16px; line-height:16px; text-align:center;}
 	</style>
-	<!-- <script type="text/javascript">
-		function imgs(){
-				var curr = 0;
-				var imglen = $(".banImgs li").length;
-				$("#jsNav .trigger").each(function(i){
-					$(this).click(function(){
-						this.blur();
-						curr = i;
-						$(".banImgs li").eq(i).css("z-index","10").siblings("li").css("z-index","1");
-						$(".banImgs li").eq(i).fadeIn(1000).siblings("li").fadeOut(1000);
-						$(this).siblings(".trigger").removeClass("current").end().addClass("current");
-						return false;
-					});
-				});
-				
-				var pg = function(flag){
-					//flag:true表示前翻， false表示后翻
-					if (flag) {
-						if (curr == 0) {
-							todo = (imglen-1);
-						} else {
-							todo = (curr - 1) % imglen;
-						}
-					} else {
-						
-						todo = (curr + 1) % imglen;
-					}
-					$("#jsNav .trigger").eq(todo).click();
-				};
-				
-				//前翻
-				$(".banPrev").click(function(){
-					pg(true);
-					return false;
-				});
-				
-				//后翻
-				$(".banNext").click(function(){
-					pg(false);
-					return false;
-				});
-				
-				//自动翻
-				var timer = setInterval(function(){
-					todo = (curr + 1) % imglen;
-					$("#jsNav .trigger").eq(todo).click();
-				},5000);
-				
-				//鼠标悬停在触发器上时停止自动翻
-				$("#jsNav a,.banPrev,.banNext").hover(function(){
-						clearInterval(timer);
-					},
-					function(){
-						timer = setInterval(function(){
-							todo = (curr + 1) % imglen;
-							$("#jsNav .trigger").eq(todo).click();
-						},5000);			
-					}
-				);
-		}
-	</script> -->
+	
 </head>
 
 <body>
 	<div class="main">
 	<!--**************************************************top***********************************************-->
 		<div class="logo">	
-			<img src="../../static/img/images/logo.png"/>	
+			<img src="../static/img/images/logo.png"/>	
 			<div style="margin-left:50px;">
 				<a href="/index" style="color:#828282;">中文</a><span style="color:#828282;">|</span>
 				<a href="/index_En" style="color:#828282;">English</a>
-				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../../static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
+				<a href="http://profitinsight.com/" style="color:#828282;margin-left:8px;"><img src="../static/img/PROFI.png" style="height:30px;padding:13px 0;float:right;_display:none;"/></a>
 			</div>	
 		</div>
 		<div class="nav">
@@ -108,35 +48,22 @@
 			</ul>
 		</div>
 		<div class="flash-replaced">
-			<embed width="1000" height="308" type="application/x-shockwave-flash" src="../../static/img/index.swf" pluginspage="http://www.adobe.com/go/getflashplayer" onclick="http://qkcardpay.sinaapp.com/hzhb/"/>
+			<embed width="1000" height="308" wmode="Opaque" type="application/x-shockwave-flash" src="../static/img/index.swf" pluginspage="http://www.adobe.com/go/getflashplayer" onclick="http://www.cardpay-sh.com/hzhb/"/>
 			<a href="/hzhb" style="z-index:2;position:absolute;top:0px;width:1000px;height:308px;"></a>
 		</div>
-		<!-- <div class="banner">
-			<ul class="banImgs">
-			  <li style="display:block"> <a href="/hzhb"><img src="../../static/img/pag4.jpg" style="width:1000px;height:308px;"/></a></li>
-			  <li> <a href="#"><img src="../../static/img/pag1.jpg" /></a></li>
-			  <li> <a href="#"><img src="../../static/img/pag2.jpg"/></a></li>
-			  <li> <a href="#"><img src="../../static/img/pag3.jpg"/></a></li>
-			</ul>
-			<div class="jsNav" id="jsNav"> 
-				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger current">1</a>
-				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">2</a> 
-				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">3</a>
-				<a href="javascript:void(0)" onfocus="this.blur();" class="trigger">4</a>
-			</div>
-		</div> -->
+		
 	<!--**************************************************content***********************************************-->
 		<div class="content-index">
 			<div class="left">
-				<img src="../../static/img/images/qk_06.png"/>
+				<img src="../static/img/images/qk_06.png"/>
 				<ul>
 					<li><a href="/jjfa">微贷技术导入</a></li>
 					<li><a href="/jjfa">信用卡运营咨询</a></li>
 					<li><a href="/jjfa">银行应用管理系统</a></li>
 					<li><a href="/jjfa">银行自助设备运营管理</a></li>
 				</ul>				
-				<img src="../../static/img/images/qk_11.png"/>
-				<a href="http://qkcardpay.sinaapp.com/"><img src="../../static/img/images/qk_JRLogo.png" style="width:160px;margin-left:25px;"/></a>
+				<img src="../static/img/images/qk_11.png"/>
+				<a href="http://www.cardpay-sh.com/"><img src="../static/img/images/qk_JRLogo.png" style="width:160px;margin-left:25px;"/></a>
 			</div>
 			<div class="right1" style="_margin-left:-45px;">
 				<a href="/xwdt" style="position:relative;top:40px;margin-left:195px;padding:5px 10px;">&nbsp;</a>
@@ -144,7 +71,7 @@
 					<li><a href="/xwdt">公司与美国PTC达成合作协议</a></li>
 				</ul>
 			</div>
-			<div class="right1" style="background: #ffffff url(../../static/img/images/qk_08.png) no-repeat;">
+			<div class="right1" style="background: #ffffff url(../static/img/images/qk_08.png) no-repeat;">
 				<a href="/jjfa" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
 				<ul style="margin-left:45px;">
 					<li><a href="/jjfa">信用卡业务运营咨询</a></li>
@@ -153,7 +80,7 @@
 					<li><a href="/jjfa">商业银行微小贷款培训</a></li>
 				</ul>
 			</div>
-			<div class="right1" style="background: #ffffff url(../../static/img/images/qk_09.jpg) no-repeat;">
+			<div class="right1" style="background: #ffffff url(../static/img/images/qk_09.jpg) no-repeat;">
 				<a href="/jrzx" style="position:relative;top:40px;margin-left:190px;padding:5px 10px;">&nbsp;</a>
 				<ul style="margin-left:45px;">
 					<li><a href="/jrzx">互联网</a></li>
@@ -165,13 +92,67 @@
 		</div>
 	<!--**************************************************foot***********************************************-->
 		<div class="foot">
-			<img src="../../static/img/images/qk_12.png"/>
-			<img src="../../static/img/images/qk_15.png"/>
-			<span><a href="http://qkcardpay.sinaapp.com/">乾康（上海）金融信息服务有限公司</a>&nbsp;|&nbsp;<a href="http://qkoa.sinaapp.com/">OA</a></span><br/>
+			<img src="../static/img/images/qk_12.png"/>
+			<img src="../static/img/images/qk_15.png"/>
+			<span><a href="http://www.cardpay-sh.com/">乾康（上海）金融信息服务有限公司</a>&nbsp;|&nbsp;<a href="http://qkoa.sinaapp.com/">OA</a></span><br/>
 			<span>沪ICP备13001462号</span>
 		</div>
 	</div>
-	<script type="text/javascript" src="../../static/js/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="../../static/js/script.js"></script>
+	<!--**************************************************方案2***********************************************-->
+	<div id="f_ad" style="border:1px solid #103f4e;padding:1px;position:absolute;z-index:1000; background:white;width:320px;height:70px"> 
+		<div style="background:#103f4e;" align="center">
+			<span id="ad_lt" style="color:white;font-size:14px;line-height:25px"></span>
+			<input type="button" value="×" title="关闭窗口" onclick="ad_t2=ad_t2+ad_t3" style="float:right;color:white;background:none;font-size:16px;margin-top:-3px;"/>
+		</div>
+		<a href="http://www.cardpay-sh.com/"><img src="../static/img/images/qk_JRLogo.png" style="width:100%"/></a>
+	</div>
+	<script>
+		var ad_w=320;
+		var ad_h=70;
+		var ad_l=(document.body.clientWidth-ad_w)/2;
+		var ad_t=(document.body.clientHeight-ad_h)/2;
+		var ad_ft=1;   //过渡时间
+		var ad_step=50;
+		var ad_time=10;
+		var ad_t1=ad_ft*1000/ad_step;
+		var ad_t2=60;
+		var ad_t3=(ad_w-ad_t2)*ad_time/ad_ft+ad_w;
+		var ad_t4=0;
+		var ad_t5=ad_time;
+		var ad_t6=ad_t2;
+		function flashad(){
+			if(ad_l<0||ad_t<0){ad_t2+=ad_t3;}
+			if(ad_t2>=ad_t3){
+				ad_t5=0;
+				if(ad_t4>ad_t6){
+					ad_t4-=(ad_w-ad_t6)/ad_t1;
+				}
+				else{
+					clearTimeout(ad_timer);
+					f_ad.style.display="none";
+					return;
+				}
+			}
+			if(ad_t2<=ad_w){
+				ad_t4=ad_t2;
+				ad_t5=ad_time;
+			}
+			if(ad_t2>ad_w&&ad_t2<ad_t3){
+				ad_t5=Math.floor(ad_time-(ad_t2-ad_w)/(ad_w-ad_t6)*ad_ft);
+			}
+			ad_t2+=(ad_w-ad_t6)/ad_t1;
+			f_ad.style.width=ad_t4;
+			f_ad.style.height=(ad_t6*ad_h/ad_w)+(ad_t4-ad_t6)*(ad_h-ad_t6*ad_h/ad_w)/(ad_w-ad_t6);
+			f_ad.style.left=(ad_t4-ad_t6)*ad_l/(ad_w-ad_t6)+document.body.scrollLeft;
+			f_ad.style.top=(ad_t4-ad_t6)*ad_t/(ad_w-ad_t6)+document.body.scrollTop;
+			ad_lt.style.width=ad_t4-28;
+			ad_lt.innerText=ad_t5+"秒后自动关闭";
+		 
+			var ad_timer=setTimeout("flashad()",ad_step);
+		}
+		flashad();
+	</script>
+	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../static/js/script.js"></script>
 </body>
 </html>
