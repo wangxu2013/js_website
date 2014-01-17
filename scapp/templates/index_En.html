@@ -10,12 +10,33 @@
 	<!-- The styles -->
 	<link href="../static/css/main.css" rel="stylesheet">
 	<style type="text/css">
-		*{font-family:Arial;overflow-x:hidden;}
+		*{font-family:Arial;padding:0;margin:0;border:none;overflow:hidden;}
 		.right1{background: #ffffff url(../static/img/images/qk_07_En.png) no-repeat;}
+		.floatdiv{ position: absolute; width:175px;cursor:pointer;}
 	</style>
+	<script type="text/javascript">
+		function scall(){			
+			sc2();
+		}
+		window.onscroll=scall;
+		window.onresize=scall;
+		window.onload=scall;		
+		function sc2(){
+			document.getElementById("right").style.top=(document.documentElement.scrollTop+(document.documentElement.clientHeight-document.getElementById("right").offsetHeight)/2)+"px";
+			document.getElementById("right").style.left=(document.documentElement.scrollLeft+document.documentElement.clientWidth-document.getElementById("right").offsetWidth)+4+"px";
+		}
+		function showsmall(){
+			$('#jt').attr('src','../static/img/box_En.png');
+			//document.getElementById("right").style.left=(document.documentElement.scrollLeft+document.documentElement.clientWidth-document.getElementById("right").offsetWidth)+140+"px";			
+		}
+		function showbig(){
+			$('#jt').attr('src','../static/img/box1_En.png');
+			//document.getElementById("right").style.left=(document.documentElement.scrollLeft+document.documentElement.clientWidth-document.getElementById("right").offsetWidth)+4+"px";
+		}
+	</script>
 </head>
 
-<body>
+<body onload="scall()">
 	<div class="main">
 	<!--**************************************************top***********************************************-->
 		<div class="logo">	
@@ -41,7 +62,7 @@
 		</div>
 		<div class="flash-replaced">
 			<embed width="1000" height="308" wmode="Opaque" type="application/x-shockwave-flash" src="../static/img/index_En.swf" pluginspage="http://www.adobe.com/go/getflashplayer" />
-			<a href="/hzhb_En" style="z-index:2;position:absolute;top:0px;width:1000px;height:308px;"></a>
+			<a href="/hzhb_En" style="z-index:2;position:absolute;top:0px;width:995px;height:308px;"></a>
 		</div>
 
 	<!--**************************************************content***********************************************-->
@@ -89,61 +110,14 @@
 			<span><a href="http://www.cardpay-sh.com/">CardPay(Shanghai) Finance Consulting Co.,Ltd.</a>&nbsp;|&nbsp;<a href="http://qkoa.sinaapp.com/">OA</a></span><br/>
 			<span>Shanghai ICP for 13001462</span>
 		</div>
-	</div>
-	<!--**************************************************方案2***********************************************-->
-	<div id="f_ad" style="border:1px solid #103f4e;padding:1px;position:absolute;z-index:1000; background:white;width:320px;height:70px"> 
-		<div style="background:#103f4e;" align="center">
-			<span id="ad_lt" style="color:white;font-size:14px;line-height:25px"></span>
-			<input type="button" value="×" title="关闭窗口" onclick="ad_t2=ad_t2+ad_t3" style="float:right;color:white;background:none;font-size:16px;margin-top:-3px;"/>
+		<div id="right" class="floatdiv" style="" align="center" onmouseover="showbig()" onmouseout="showsmall()">
+			<!-- <div id="message" onclick="window.location.href = 'http://www.cardpay-sh.com/'" >
+				<span>乾康（上海）金融信息服务有限公司点这里<img src="../static/img/jt.png" style="" id="jt"/></span>
+			</div> -->
+			<a href="http://www.cardpay-sh.com/"><img src="../static/img/box_En.png" style="width:100%;" id="jt"/></a>
 		</div>
-		<a href="http://www.cardpay-sh.com/"><img src="../static/img/images/qk_JRLogo.png" style="width:100%"/></a>
 	</div>
-	<script>
-		var ad_w=320;
-		var ad_h=70;
-		var ad_l=(document.body.clientWidth-ad_w)/2;
-		var ad_t=(document.body.clientHeight-ad_h)/2;
-		var ad_ft=1;   //过渡时间
-		var ad_step=50;
-		var ad_time=10;
-		var ad_t1=ad_ft*1000/ad_step;
-		var ad_t2=60;
-		var ad_t3=(ad_w-ad_t2)*ad_time/ad_ft+ad_w;
-		var ad_t4=0;
-		var ad_t5=ad_time;
-		var ad_t6=ad_t2;
-		function flashad(){
-			if(ad_l<0||ad_t<0){ad_t2+=ad_t3;}
-			if(ad_t2>=ad_t3){
-				ad_t5=0;
-				if(ad_t4>ad_t6){
-					ad_t4-=(ad_w-ad_t6)/ad_t1;
-				}
-				else{
-					clearTimeout(ad_timer);
-					f_ad.style.display="none";
-					return;
-				}
-			}
-			if(ad_t2<=ad_w){
-				ad_t4=ad_t2;
-				ad_t5=ad_time;
-			}
-			if(ad_t2>ad_w&&ad_t2<ad_t3){
-				ad_t5=Math.floor(ad_time-(ad_t2-ad_w)/(ad_w-ad_t6)*ad_ft);
-			}
-			ad_t2+=(ad_w-ad_t6)/ad_t1;
-			f_ad.style.width=ad_t4;
-			f_ad.style.height=(ad_t6*ad_h/ad_w)+(ad_t4-ad_t6)*(ad_h-ad_t6*ad_h/ad_w)/(ad_w-ad_t6);
-			f_ad.style.left=(ad_t4-ad_t6)*ad_l/(ad_w-ad_t6)+document.body.scrollLeft;
-			f_ad.style.top=(ad_t4-ad_t6)*ad_t/(ad_w-ad_t6)+document.body.scrollTop;
-			ad_lt.style.width=ad_t4-28;
-			ad_lt.innerText="Shut down after "+ad_t5+" seconds";
-		 
-			var ad_timer=setTimeout("flashad()",ad_step);
-		}
-		flashad();
-	</script>
+	
 	<script type="text/javascript" src="../static/js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../static/js/script.js"></script>
 </body>
